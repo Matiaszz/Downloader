@@ -1,0 +1,20 @@
+
+{% include "downloader/partials/head.html" %}
+{% block content %}
+    <h1>Sistema de download de videos do yt</h1>
+    <p>Frontend em breve</p>
+    <form method="post" id="download-form">
+        {% csrf_token %}
+
+        <label for="link">URL do Vídeo:</label>
+        <input type="text" name="link" required>
+        <br>
+        <button type="submit">Baixar</button>
+        
+    </form>
+
+    <div id="result"></div>
+
+    {% include "downloader/partials/script.html" %}
+{% endblock content %}
+ 

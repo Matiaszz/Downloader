@@ -1,8 +1,10 @@
+# pylint: disable=all
 from django.urls import path
-from .views import index, search
+from .views import index, download_video
+
+app_name = 'downloader'
 
 urlpatterns = [
     path('', index, name='index'),
-    path('search', search, name='search'),
-
+    path('download/', download_video, name='download_video'),
 ]
